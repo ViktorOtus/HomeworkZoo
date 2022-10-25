@@ -8,14 +8,11 @@ public class Duck extends Animal implements Fly {
     public Duck(String name, String age, String weight, String color) {
         super(name, Integer.parseInt(String.valueOf(age)), Integer.parseInt(String.valueOf(weight)), color);
     }
-    public static void run() {
+
+    public void say() {
         System.out.println("Кря");
     }
-    public static void fly(String[] args) {
-        System.out.println("Я лечу");
-    }
-    @Override
     public void fly() {
-
+        System.out.println("Я лечу");
     }
 }

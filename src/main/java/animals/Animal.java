@@ -9,13 +9,13 @@ public abstract class Animal {
     protected int weight;
     protected String color;
 
-
     public Animal(String name, int age, int weight, String color) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.color = color;
     }
+
     private String getPrefix(int age) {
         int ageLastNumber = age % 10;
         boolean exclusion = (age % 100 >= 11) && (age % 100 <= 14);
@@ -23,19 +23,14 @@ public abstract class Animal {
 
         if (ageLastNumber == 1)
             old = "год";
-        else if(ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
+        else if(ageLastNumber == 0 || ageLastNumber >= 5)
             old = "лет";
-        else if(ageLastNumber >= 2 && ageLastNumber <= 4)
+        else if(ageLastNumber >= 2)
             old = "года";
         if (exclusion)
             old = "лет";
         return old;
     }
-
-
-
-
-
 
     public String getName() {
         return name;
@@ -61,7 +56,6 @@ public abstract class Animal {
     public void setColor(String color) {
         this.color = color;
     }
-
     public void say() {
         System.out.print("Я говорю");
     }
@@ -74,7 +68,6 @@ public abstract class Animal {
     public void eat() {
         System.out.print("Я ем");
     }
-
 
     @Override
     public int hashCode() {
