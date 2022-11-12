@@ -6,7 +6,7 @@ import animals.Fly;
 public class Duck extends Animal implements Fly {
 
     public Duck(String name, String age, String weight, String color) {
-        super(name, Integer.parseInt(String.valueOf(age)), Integer.parseInt(String.valueOf(weight)), color);
+        super(name, Integer.parseInt(age), Integer.parseInt(weight), color);
     }
     public static void run() {
         System.out.println("Кря");
@@ -16,6 +16,5 @@ public class Duck extends Animal implements Fly {
     }
     @Override
     public void fly() {
-
     }
 }
